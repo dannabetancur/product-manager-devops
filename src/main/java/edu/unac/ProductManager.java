@@ -34,11 +34,12 @@ public class ProductManager {
         return new ArrayList<>(products.values());
     }
 
-    public List<Product> getProductsByPriceRange(double min, double max){
+    public List<Product> getProductsByPriceRange(double min, double max) {
         return products.values().stream()
                 .filter(p -> p.getPrice() >= min && p.getPrice() <= max)
                 .collect(Collectors.toList());
     }
+
 
 
 
